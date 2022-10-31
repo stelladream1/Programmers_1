@@ -1,0 +1,6 @@
+def solution(n):
+    melon = "수박"
+    if n % 2 == 0:
+        return melon * (n//2)
+    else:
+        return melon * (n//2) + melon[0]
