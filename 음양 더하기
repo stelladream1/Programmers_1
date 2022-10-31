@@ -1,0 +1,12 @@
+def solution(absolutes, signs):
+    result = 0
+
+    
+    
+    for absolutes,signs in zip(absolutes,signs):
+        
+        if signs:
+            result = result + absolutes
+        else:
+            result = result - absolutes
+    return result
