@@ -1,0 +1,6 @@
+def solution(a, b):
+    # result = 0
+    # for a,b in zip(a,b):
+    #     result = result + a*b 
+    # return result
+    return sum([x*y for x,y in zip(a,b)])
