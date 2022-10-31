@@ -1,0 +1,2 @@
+def solution(price, money, count):
+        return max(0,sum(i for i in range(price,price*count+1,price)) - money)
