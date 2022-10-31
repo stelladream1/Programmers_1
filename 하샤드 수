@@ -1,0 +1,5 @@
+def solution(x):
+    
+    result = sum([int(i) for i in str(x)])
+    print(result)
+    return True if x % result == 0 else False
