@@ -1,0 +1,12 @@
+def solution(s):
+    s = list(s.upper())
+    count = 0
+    for i in range(len(s)):
+        if s[i] == " ":
+            count = 0
+        else:
+            if count % 2 == 1:
+                s[i]= chr(ord(s[i]) + 32)
+            count = count + 1
+            
+    return "".join(s)
