@@ -1,0 +1,12 @@
+def solution(n):
+    array = []
+    if n <=3:
+        return n
+    else:
+        while True:
+            n,m = divmod(n,3)
+            array.append(m)        
+            if n<3:
+                break
+        array.append(n)
+        return sum([array[i] * 3**(len(array)-i-1) for i in range(0,len(array))])
