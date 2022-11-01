@@ -1,12 +1,17 @@
 def solution(n):
-    array = []
-    if n <=3:
-        return n
-    else:
-        while True:
-            n,m = divmod(n,3)
-            array.append(m)        
-            if n<3:
-                break
-        array.append(n)
-        return sum([array[i] * 3**(len(array)-i-1) for i in range(0,len(array))])
+    # array = []
+    # if n <=3:
+    #     return n
+    # while True:
+    #     n,m = divmod(n,3)
+    #     array.append(m)        
+    #     if n<3:
+    #         break
+    # array.append(n)
+    # return sum([array[i] * 3**(len(array)-i-1) for i in range(0,len(array))])
+    temp =  ""
+    while n:
+        temp  =temp + str(n % 3)
+        n = n // 3
+    return int(temp,3)
+                 
