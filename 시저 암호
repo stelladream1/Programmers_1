@@ -1,0 +1,10 @@
+def solution(s, n):
+    array= []
+    for i in s:
+        if i==" ":
+            array.append(" ")
+        elif (i.islower() and 122< ord(i) + n) or (i.isupper() and 90< ord(i) + n):
+            array.append(chr(ord(i) + n -26))
+        else:
+            array.append(chr(ord(i) + n))
+    return "".join(array)
