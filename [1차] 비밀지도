@@ -1,0 +1,37 @@
+import re
+def solution(n, arr1, arr2):
+    answer = ["#"]*n
+    for i in range(n):
+        answer[i] = (bin(arr1[i] | arr2[i]))[2:].zfill(n)
+        answer[i] = re.sub('1', '#', answer[i])
+        answer[i] = re.sub('0', ' ', answer[i])
+    return answer
+
+
+
+
+# def solution(n, arr1, arr2):
+#     array1 = []
+#     array2 = []
+#     answer = []
+#     for i in range(n):
+#         if len(bin(arr1[i])[2:]) == n:
+#             array1.append(str(0) + bin(arr1[i])[2:])
+#         else:
+#             array1.append(str(0) * (n - len(bin(arr1[i])[2:])) + bin(arr1[i])[2:])
+
+#         if len(bin(arr2[i])[2:]) == n:
+#             array2.append(bin(arr2[i])[2:])
+#         else:
+#             array2.append(str(0) * (n - len(bin(arr2[i])[2:])) + bin(arr2[i])[2:])
+#     for i in range(n):
+#         result = str(int(array1[i]) + int(array2[i]))
+#         for j in result:
+#             if int(j) >= 1:
+#                 result = result.replace(j, "#")
+#             else:
+#                 result = result.replace(j, " ")
+#         if len(result) != n:
+#             result = " " * (n - len(result)) + result
+#         answer.append(result)
+#     return (answer)
