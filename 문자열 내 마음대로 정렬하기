@@ -1,0 +1,16 @@
+def solution(strings, n):
+    return sorted(sorted(strings), key=lambda x: x[n])
+#     array = []
+#     strings = sorted(strings)
+#     result = []
+    
+#     for i in strings:
+#         array.append(i[n])
+#     array = list(set(array))
+#     array.sort()
+    
+#     for i in array:
+#         for j in strings:
+#             if j[n] == i:
+#                 result.append(j)
+#     return result
