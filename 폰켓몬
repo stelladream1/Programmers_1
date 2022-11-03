@@ -1,0 +1,7 @@
+def solution(nums):
+    nums_length = (len(nums)//2)
+    nums_set = len(set(nums))
+    
+    print(nums_length)
+    print(nums_set)
+    return min(nums_length,nums_set)
