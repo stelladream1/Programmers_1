@@ -1,0 +1,31 @@
+
+def solution(X, Y):
+    result=""
+    for i in range(9,-1,-1):
+            result = result+ (str(i) * min(X.count(str(i)),Y.count(str(i))))
+    if len(result)==0:
+        return "-1"
+    else:
+        if result.count("0")==len(result):
+            return "0"
+        else:
+            return result
+        
+# import re
+# def solution(X, Y):
+#     temp = Y
+#     array = []
+#     for i in range(9,-1,-1):
+#         if str(i) in X and str(i) in Y:
+#             if X.count(str(i)) >=2 and Y.count(str(i)) >=2:
+#                 array.extend([str(i)] * min(X.count(str(i)),Y.count(str(i))))
+#             else:
+#                 array.append(str(i))
+#             Y = re.sub(str(i),"",Y,min(X.count(str(i)),Y.count(str(i))))
+#     if len(array)==0:
+#         return "-1"
+#     else:
+#         if array.count("0")==len(array):
+#             return "0"
+#         else:
+#             return "".join(array)
