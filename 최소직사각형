@@ -1,0 +1,10 @@
+def solution(sizes):
+    value = 0
+    value2 = 0
+    for a,b in sizes:
+        if a > b:
+            a, b = b, a
+                
+        value = max(a,value)
+        value2 = max(b,value2)
+    return value*value2
